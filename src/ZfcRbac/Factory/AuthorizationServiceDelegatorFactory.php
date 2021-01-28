@@ -19,9 +19,9 @@
 namespace ZfcRbac\Factory;
 
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\AbstractPluginManager;
-use Zend\ServiceManager\DelegatorFactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\AbstractPluginManager;
+use Laminas\ServiceManager\DelegatorFactoryInterface;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 use ZfcRbac\Exception\RuntimeException;
 use ZfcRbac\Service\AuthorizationServiceAwareInterface;
 
@@ -49,7 +49,7 @@ class AuthorizationServiceDelegatorFactory implements DelegatorFactoryInterface
         }
 
         if ($container instanceof AbstractPluginManager) {
-            $container = $container->getServiceLocator();
+            $container = $container;
         }
 
         $authorizationService = $container->get('ZfcRbac\Service\AuthorizationService');
