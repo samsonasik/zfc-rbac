@@ -94,6 +94,6 @@ class ObjectRepositoryRoleProviderFactory implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        return $this($serviceLocator->getServiceLocator(), ObjectRepositoryRoleProvider::class, $this->options);
+        return $this($serviceLocator, ObjectRepositoryRoleProvider::class, $this->options);
     }
 }

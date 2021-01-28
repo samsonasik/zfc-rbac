@@ -84,6 +84,6 @@ class RoutePermissionsGuardFactory implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        return $this($serviceLocator->getServiceLocator(), RoutePermissionsGuard::class, $this->options);
+        return $this($serviceLocator, RoutePermissionsGuard::class, $this->options);
     }
 }

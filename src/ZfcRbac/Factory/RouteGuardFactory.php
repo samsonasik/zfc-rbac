@@ -83,6 +83,6 @@ class RouteGuardFactory implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        return $this($serviceLocator->getServiceLocator(), RouteGuard::class, $this->options);
+        return $this($serviceLocator, RouteGuard::class, $this->options);
     }
 }
